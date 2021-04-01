@@ -47,7 +47,7 @@ CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY,
 OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
 OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE." />
 <link id="faviconLink" rel="shortcut icon" href="favicon.ico">
-<title>NoteBook — this is a notebook powered by Vercel</title>
+<title>NoteBook — a non-linear personal web notebook</title>
 <!--~~ This is a Tiddlywiki file. The points of interest in the file are marked with this pattern ~~-->
 
 <!--~~ Raw markup ~~-->
@@ -141,10 +141,6 @@ Error message and password prompt
 
 <p>This <a class="tc-tiddlylink-external" href="https://tiddlywiki.com" rel="noopener noreferrer" target="_blank">TiddlyWiki</a> contains the following tiddlers:</p><p><ul>
 
-<li>$:/config/Toolbar/ButtonClass</li>
-
-<li>$:/config/ViewToolbarButtons/Visibility/$:/core/ui/Buttons/open-window</li>
-
 <li>$:/core</li>
 
 <li>$:/DefaultTiddlers</li>
@@ -159,7 +155,9 @@ Error message and password prompt
 
 <li>$:/isEncrypted</li>
 
-<li>$:/SiteSubtitle</li>
+<li>$:/layout</li>
+
+<li>$:/palette</li>
 
 <li>$:/SiteTitle</li>
 
@@ -173,17 +171,21 @@ Error message and password prompt
 
 <li>$:/state/tab/sidebar--595412856</li>
 
-<li>$:/state/tabs/controlpanel/toolbars-1345989671</li>
-
 <li>$:/status/RequireReloadDueToPluginChange</li>
 
-<li>$:/status/UserName</li>
-
 <li>$:/StoryList</li>
+
+<li>$:/theme</li>
 
 <li>$:/themes/tiddlywiki/snowwhite</li>
 
 <li>$:/themes/tiddlywiki/vanilla</li>
+
+<li>$:/themes/tiddlywiki/vanilla/options/sidebarlayout</li>
+
+<li>$:/themes/tiddlywiki/vanilla/options/stickytitles</li>
+
+<li>$:/view</li>
 
 <li>testfolder</li>
 
@@ -201,12 +203,6 @@ Error message and password prompt
 <!--~~ Ordinary tiddlers ~~-->
 
 <div id="storeArea" style="display:none;">
-<div created="20210401153838409" creator="WANG" modified="20210401153838409" modifier="WANG" title="$:/config/Toolbar/ButtonClass">
-<pre>tc-btn-boxed</pre>
-</div>
-<div created="20210401153719834" creator="WANG" modified="20210401153719834" modifier="WANG" title="$:/config/ViewToolbarButtons/Visibility/$:/core/ui/Buttons/open-window">
-<pre>show</pre>
-</div>
 <div author="JeremyRuston" core-version="&gt;=5.0.0" dependents="" description="TiddlyWiki5 core" list="readme" name="Core" plugin-priority="0" plugin-type="plugin" title="$:/core" type="application/json" version="5.1.23">
 <pre>{
     &quot;tiddlers&quot;: {
@@ -10071,7 +10067,7 @@ Error message and password prompt
     }
 }</pre>
 </div>
-<div created="20210401153618259" creator="WANG" modified="20210401153621659" modifier="WANG" title="$:/DefaultTiddlers">
+<div created="20210401153433936" modified="20210401153508418" title="$:/DefaultTiddlers">
 <pre>testfolder</pre>
 </div>
 <div created="20210401151338213" modified="20210401151341138" title="$:/GitHub/Filename">
@@ -10089,38 +10085,38 @@ Error message and password prompt
 <div title="$:/isEncrypted">
 <pre>no</pre>
 </div>
-<div created="20210401153541172" modified="20210401153600619" title="$:/SiteSubtitle">
-<pre>this is a notebook powered by Vercel</pre>
+<div created="20210401154144493" modified="20210401154145919" title="$:/layout">
+<pre>$:/core/ui/PageTemplate</pre>
 </div>
-<div created="20210401153532240" modified="20210401153535816" title="$:/SiteTitle">
+<div created="20210401154015340" modified="20210401154135244" title="$:/palette">
+<pre>$:/palettes/Vanilla</pre>
+</div>
+<div created="20210401153422960" modified="20210401153426012" title="$:/SiteTitle">
 <pre>NoteBook</pre>
 </div>
 <div created="20210401152716172" modified="20210401152908832" title="$:/state/showeditpreview">
 <pre>yes</pre>
 </div>
-<div created="20210401153658989" creator="WANG" modified="20210401153737350" modifier="WANG" title="$:/state/tab--1963855381">
+<div created="20210401153950445" modified="20210401154146794" title="$:/state/tab--1963855381">
 <pre>$:/themes/tiddlywiki/vanilla/themetweaks</pre>
 </div>
-<div created="20210401151133593" creator="WANG" modified="20210401153854090" modifier="WANG" title="$:/state/tab-1749438307">
-<pre>$:/core/ui/ControlPanel/Plugins</pre>
+<div created="20210401151133593" modified="20210401153945178" title="$:/state/tab-1749438307">
+<pre>$:/core/ui/ControlPanel/Appearance</pre>
 </div>
-<div created="20210401151149509" modified="20210401151149509" title="$:/state/tab-2065006209">
-<pre>$:/core/ui/ControlPanel/Saving/GitHub</pre>
+<div created="20210401151149509" modified="20210401153940680" title="$:/state/tab-2065006209">
+<pre>$:/core/ui/ControlPanel/Saving/DownloadSaver</pre>
 </div>
-<div created="20210401153248727" modified="20210401153248727" title="$:/state/tab/sidebar--595412856">
-<pre>$:/core/ui/SideBar/Recent</pre>
-</div>
-<div created="20210401153725923" creator="WANG" modified="20210401153733299" modifier="WANG" title="$:/state/tabs/controlpanel/toolbars-1345989671">
-<pre>$:/core/ui/ControlPanel/Toolbars/EditToolbar</pre>
+<div created="20210401153248727" modified="20210401153455586" title="$:/state/tab/sidebar--595412856">
+<pre>$:/core/ui/SideBar/Open</pre>
 </div>
 <div title="$:/status/RequireReloadDueToPluginChange">
 <pre>no</pre>
 </div>
-<div created="20210401153606633" creator="W" modified="20210401153606944" modifier="WAN" title="$:/status/UserName">
-<pre>WANG</pre>
-</div>
-<div created="20210401153524741" list="$:/ControlPanel GettingStarted" modified="20210401153524741" title="$:/StoryList">
+<div created="20210401153937785" list="$:/ControlPanel testfolder" modified="20210401153937785" title="$:/StoryList">
 <pre></pre>
+</div>
+<div created="20210401154107822" modified="20210401154109283" title="$:/theme">
+<pre>$:/themes/tiddlywiki/vanilla</pre>
 </div>
 <div author="JeremyRuston" core-version="&gt;=5.0.0" dependents="$:/themes/tiddlywiki/vanilla" description="Emphasises individual tiddlers" name="Snow White" plugin-priority="0" plugin-type="theme" title="$:/themes/tiddlywiki/snowwhite" type="application/json" version="5.1.23">
 <pre>{
@@ -10230,6 +10226,15 @@ Error message and password prompt
         }
     }
 }</pre>
+</div>
+<div created="20210401154157373" modified="20210401154157373" title="$:/themes/tiddlywiki/vanilla/options/sidebarlayout">
+<pre>fluid-fixed</pre>
+</div>
+<div created="20210401154207392" modified="20210401154209649" title="$:/themes/tiddlywiki/vanilla/options/stickytitles">
+<pre>no</pre>
+</div>
+<div created="20210401154055913" modified="20210401154100630" title="$:/view">
+<pre>classic</pre>
 </div>
 <div author="WANG" created="20210401152621395" modified="20210401153258353" tags="test" title="testfolder" type="text/vnd.tiddlywiki">
 <pre>! This is a test note
