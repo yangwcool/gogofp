@@ -44,10 +44,8 @@ date[1].textContent = '🔯👉'+numList[week];
 
 
 //		显示天气
-// 和风天气 key=93154022920b4c4db83874db33b724d3   HE1604171532431136
 // Haidian = 101010200
 // Dongcheng = 101011600
-// 3day https://devapi.qweather.com/v7/weather/3d?location=101011600&key=93154022920b4c4db83874db33b724d3
 //		请求天气
 let XHR = new XMLHttpRequest();
 XHR.onreadystatechange = function() {
