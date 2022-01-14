@@ -38,9 +38,9 @@ let dayRight = day%10;
 let numList = ['0️⃣','1️⃣','2️⃣','3️⃣','4️⃣','5️⃣','6️⃣','7️⃣','8️⃣','9️⃣'];
 let date = document.querySelectorAll('div.date p');
 //日期
-date[0].textContent = '🈷️➡'+numList[dayLeft]+numList[dayRight];
+date[0].textContent = '🈷️'+numList[dayLeft]+numList[dayRight];
 //星期
-date[1].textContent = '🔯➡'+numList[week];
+date[1].textContent = '🔯'+numList[week];
 
 
 //		显示天气
