@@ -2,7 +2,7 @@
 
 
 /*      search module            */
-let labels = document.querySelectorAll('div.banner-1 label');
+let labels = document.querySelectorAll('div.searchLabel label');
 let searchForm = document.querySelector('.searchForm');
 let inputName = document.querySelector('.search-bar');
 
@@ -36,7 +36,7 @@ let dayLeft = parseInt(day/10);
 let dayRight = day%10;
 
 let numList = ['0️⃣','1️⃣','2️⃣','3️⃣','4️⃣','5️⃣','6️⃣','7️⃣','8️⃣','9️⃣'];
-let date = document.querySelectorAll('div.date p');
+let date = document.querySelectorAll('ul.date li');
 //日期
 date[0].textContent = '🈷️'+numList[dayLeft]+numList[dayRight];
 //星期
@@ -58,6 +58,7 @@ XHR2.onreadystatechange = function() {
 	//请求成功
 	if (this.readyState == 4 && this.status == 200) {
 		let jsonWthr = JSON.parse(this.responseText);
+		console.log(jsonWthr);
 		//解析返回的json
 		renderWthr(jsonWthr);	
 	}
@@ -82,17 +83,22 @@ function renderWthr(jsonObj){
 	//风速
 	let windSpeedDay = jsonObj.daily[1].windSpeedDay;
 	let windSpeedNight = jsonObj.daily[1].windSpeedNight;
+	console.log(`Fengsu day-night: ${windSpeedDay} - ${windSpeedNight}`);
 	//湿度
 	let humidity = jsonObj.daily[1].humidity;
 	//更新时间
 	let updateTime = jsonObj.updateTime;
-
+	console.log(`update at :${updateTime}`);
+	//预报日期
+	let fxDate = jsonObj.daily[1].fxDate;
+	console.log(`Yubao Riqi: ${fxDate}`);
+	
 	//显示到信息栏
 	let tqnumList = ['0️⃣','1️⃣','2️⃣','3️⃣','4️⃣','5️⃣','6️⃣','7️⃣','8️⃣','9️⃣'];
-	let weather = document.querySelectorAll('div.weather p');
+	let weather = document.querySelectorAll('ul.weather li');
 	
 	//温度
-	console.log(tempMax+'~'+tempMin);
+	//console.log(tempMax+'~'+tempMin);
 	if (tempMin >= 0) {
 		weather[0].textContent = '🌈'+tqnumList[parseInt(tempMax/10)]+tqnumList[tempMax%10]+
 	'⏩'+tqnumList[parseInt(tempMin/10)]+tqnumList[tempMin%10];
@@ -106,23 +112,23 @@ function renderWthr(jsonObj){
 	//天气
 	weather[1].textContent = '☀️'+textDay+'⏩'+textNight;
 	
-	//预警
-	weather[2].textContent = '✅';
-	
 	//湿度
-	//if(parseInt(humidity) >= 60){
-	//	weather[2].textContent = weather[2].textContent+ '🥵';
-	//}
+	weather[2].textContent = `💧 ${humidity}%`;
 	
-	//高温
+	//预警
+	weather[3].textContent = '✅';
+	
+	  //高温
 	if(parseInt(tempMax) >= 37){
-		weather[2].textContent = '🥵';
+		weather[3].textContent = '🥵';
 	}
-	//大风
+	  //大风
 	if(parseInt(windSpeedDay)>19 || parseInt(windSpeedNight)>19 ){
-		weather[2].textContent = '🌀';
+		weather[3].textContent = '🌀';
 	}
 	
+	//预报日期
+	weather[4].textContent = '💤 '+fxDate;
 
 }
 
