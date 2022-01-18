@@ -14,6 +14,12 @@
         #url>ul>li {
             width: 16%;
         }
+        ul.searchBtnList{
+            margin-left: 38px;
+        }
+        ul.searchBtnList li a {
+            padding: 3px 15px 3px 15px;
+        }
     </style>
   </head>
   <body>
@@ -22,7 +28,7 @@
         <div class="row">
             <div class="col-md-12">
                 <div class="page-header">
-                    <h1>Example page header <small>Subtext for header</small></h1>
+                    <h1>🌍 Thermo Fisher <small> Electron Corporation</small></h1>
                 </div>
             </div>
         </div>
@@ -33,33 +39,24 @@
                     <div class="panel-body">
                         <div class="row">
                             <div class="col-md-1"></div>
-                            <div class="searchLabel col-md-6">
-                                <label class="radio-inline">
-                                    <input type="radio" name="engine" value="baidu">百度
-                                </label>
-                                <label class="radio-inline">
-                                    <input type="radio" name="engine" value="doge">多吉
-                                </label>
-                                <label class="radio-inline">
-                                    <input type="radio" name="engine" value="zhihu">知乎
-                                </label>
-                                <label class="radio-inline">
-                                    <input type="radio" name="engine" value="bing" checked="checked">必应
-                                </label>
-                                <label class="radio-inline">
-                                    <input type="radio" name="engine" value="google">Google
-                                </label>
-                                <label class="radio-inline">
-                                    <input type="radio" name="engine" value="miji">秘迹
-                                </label>
+                            <div class="col-md-5">
+                                <ul class="searchBtnList nav nav-tabs">
+                                    <li role="presentation"><a id="baidu" href="#">百度</a></li>
+                                    <li role="presentation" class="active"><a id="bing" href="#">必应</a></li>
+                                    <li role="presentation"><a id="google" href="#">Google</a></li>
+                                    <li role="presentation"><a id="zhihu" href="#">知乎</a></li>
+                                </ul>
                             </div>
                         </div>
                         <div class="row">
+                            <div class="col-md-1"></div>
                             <div class="col-md-8">
                                 <form class="searchForm" action="https://cn.bing.com/search" method="get" target="_blank">
                                     <div class="input-group">
-                                        <span class="input-group-addon" id="basic-addon1">Bing</span>
-                                        <input class="search-bar form-control" type="text" name="q">
+                                        <div class="input-group-btn">
+                                           <button class="clearKwd btn btn-default" type="button">@</button>
+                                        </div>
+                                        <input class="searchBar form-control" type="text" name="q" placeholder=" type to search">
                                         <span class="input-group-btn">
                                             <button class="btn btn-primary" type="submit">搜索</button>
                                         </span>

@@ -1,31 +1,65 @@
-/* gogofp */
+/*   搜索组件         */
 
+//为每个按钮绑定方法
+let searchBtnList = document.querySelectorAll(".searchBtnList li a");
 
-/*      search module            */
-let labels = document.querySelectorAll('div.searchLabel label');
-let searchForm = document.querySelector('.searchForm');
-let inputName = document.querySelector('.search-bar');
+for (let i = 0; i < searchBtnList.length; i++) {
+	searchBtnList[i].addEventListener("click",function(e){
+		let id = e.target.getAttribute('id');
+		//另一种:$(this).attr("id")
 
-let actions=['https://www.baidu.com/s',
-'https://www.dogedoge.com/results',
-'https://www.zhihu.com/search',
-'https://cn.bing.com/search',
-'https://www.google.com/search',
-'https://mijisou.com/'];
-let names = ['wd','q','q','q','q','q'];
-
-for(let i=0;i<labels.length;i++){
-    labels[i].onclick = function(){
-        searchForm.action = actions[i];
-        inputName.name = names[i];
-    }
+		//回调函数如果带参数，则须通过此种形式调用
+		setFormAttr(id);
+		setPrimaryBtn(id);
+	});	
 }
 
-/*       open in new tab          */
-// let links = document.querySelectorAll('table.links a');
-// for(let i=0;i<links.length;i++){
-//     links[i].target = "_blank"
-// };
+//函数用于设置form属性
+function setFormAttr(engineName){
+	const searchEngineDic = {
+		"baidu":{
+			action:"https://www.baidu.com/s",
+			name:"wd"
+		},
+		"bing":{
+			action:"https://cn.bing.com/search",
+			 name:"q"
+		},
+		"google":{
+			action:"https://www.google.com/search",
+			 name:"q"
+		},
+		"zhihu":{
+			action:"https://www.baidu.com/s",
+			 name:"q"
+		}
+	}
+	console.log(`${engineName} is clicked`);
+	//设置action属性
+	let searchForm = document.querySelector('form.searchForm');
+	searchForm.action = searchEngineDic[engineName].action;
+	
+	//设置name属性
+	let inputName = document.querySelector('input.searchBar');
+    inputName.name = searchEngineDic[engineName].name;
+};
+
+//设置被点击li的class为active
+function setPrimaryBtn(btnName){
+	for (let i = 0; i < searchBtnList.length; i++) {
+		if (searchBtnList[i].id == btnName) {
+			searchBtnList[i].parentNode.classList.add("active");
+		}else{
+			searchBtnList[i].parentNode.classList.remove("active");
+		};
+	}
+}
+
+//清除keyword
+document.querySelector('button.clearKwd').addEventListener('click',clearKwd);
+function clearKwd(){
+	document.querySelector('input.searchBar').value = '';
+}
 
 //       显示日期               
 let myDate = new Date();
@@ -69,7 +103,6 @@ url3 = url3.replace(/index/,'key');
 url = url1+url2+url3;
 
 XHR2.open('get',url,true);
-//XHR2.open('get', 'WeatherSample.json',true);
 XHR2.send();
 
 //渲染json
