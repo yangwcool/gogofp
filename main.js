@@ -64,17 +64,15 @@ function clearKwd(){
 //       显示日期               
 let myDate = new Date();
 let day = myDate.getDate();
+let month = myDate.getMonth();
 let week = myDate.getDay();
 
-let dayLeft = parseInt(day/10);
-let dayRight = day%10;
+//
+let weekArray = ['星期日','星期一','星期二','星期三','星期四','星期五','星期六'];
 
-let numList = ['0️⃣','1️⃣','2️⃣','3️⃣','4️⃣','5️⃣','6️⃣','7️⃣','8️⃣','9️⃣'];
-let date = document.querySelectorAll('ul.date li');
-//日期
-date[0].textContent = '🈷️'+numList[dayLeft]+numList[dayRight];
-//星期
-date[1].textContent = '🔯'+numList[week];
+let dateList = document.querySelector('.dateList');
+
+dateList.innerHTML += `${month+1}月${day}日<br>${weekArray[week]}<br>`;
 
 
 //		显示天气
@@ -127,41 +125,26 @@ function renderWthr(jsonObj){
 	console.log(`Yubao Riqi: ${fxDate}`);
 	
 	//显示到信息栏
-	let tqnumList = ['0️⃣','1️⃣','2️⃣','3️⃣','4️⃣','5️⃣','6️⃣','7️⃣','8️⃣','9️⃣'];
-	let weather = document.querySelectorAll('ul.weather li');
+	let weatherList = document.querySelector('.weatherList');
 	
 	//温度
-	//console.log(tempMax+'~'+tempMin);
-	if (tempMin >= 0) {
-		weather[0].textContent = '🌈'+tqnumList[parseInt(tempMax/10)]+tqnumList[tempMax%10]+
-	'⏩'+tqnumList[parseInt(tempMin/10)]+tqnumList[tempMin%10];
-	}else{
-		weather[0].textContent = '🌈'+tqnumList[parseInt(tempMax/10)]+tqnumList[tempMax%10]+
-	'⏩'+'*️⃣'+tqnumList[(-1*tempMin)%10];
-	}
-
-	
-	
+	weatherList.innerHTML += `温度: ${tempMax} - ${tempMin}<br>`;
 	//天气
-	weather[1].textContent = '☀️'+textDay+'⏩'+textNight;
-	
+	weatherList.innerHTML += `天气: ${textDay} - ${textNight}<br>`;
 	//湿度
-	weather[2].textContent = `💧 ${humidity}%`;
-	
-	//预警
-	weather[3].textContent = '✅';
-	
+	weatherList.innerHTML += `湿度: ${humidity}%<br>`;
+	//风力
+	weatherList.innerHTML += `风速: ${windSpeedDay} - ${windSpeedNight}<br>`;
 	  //高温
 	if(parseInt(tempMax) >= 37){
-		weather[3].textContent = '🥵';
+		weatherList.innerHTML += '🥵'+'<br>';
 	}
 	  //大风
 	if(parseInt(windSpeedDay)>19 || parseInt(windSpeedNight)>19 ){
-		weather[3].textContent = '🌀';
+		weatherList.innerHTML += '🌀'+'<br>';
 	}
-	
 	//预报日期
-	weather[4].textContent = '💤 '+fxDate;
+	weatherList.innerHTML += `预报: ${fxDate}<br>`;
 
 }
 
