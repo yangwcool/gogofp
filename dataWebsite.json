@@ -13,6 +13,12 @@
             "level":1
         },
         {
+            "title":"必应翻译",
+            "url":"https://cn.bing.com/translator",
+            "category":"Work",
+            "level":1
+        },
+        {
             "title":"Google",
             "url":"https://www.google.com/ncr",
             "category":"Changyong",
@@ -205,6 +211,12 @@
             "level":1
         },
         {
+            "title":"Profile",
+            "url":"https://www.developers.pub/resume",
+            "category":"Work",
+            "level":1
+        },
+        {
             "title":"GreaseFork",
             "url":"https://greasyfork.org/zh-CN",
             "category":"Chagnyong",
@@ -307,6 +319,12 @@
             "level":1
         },
         {
+            "title":"排污许可规范",
+            "url":"http://sthjt.yn.gov.cn/zt/zt/2020zt/pwxk/xgzlxz/jsgf/202004/t20200422_205156.html",
+            "category":"Work",
+            "level":1
+        },
+        {
             "title":"飞翔飞",
             "url":"http://kjepc-pc.duanshu.com/",
             "category":"Chagnyong",
@@ -357,6 +375,18 @@
         {
             "title":"腾讯文档",
             "url":"https://docs.qq.com",
+            "category":"Work",
+            "level":1
+        },
+        {
+            "title":"轻松传",
+            "url":"https://easychuan.cn",
+            "category":"Work",
+            "level":1
+        },
+        {
+            "title":"autoIT",
+            "url":"https://www.autoitx.com/Doc/",
             "category":"Work",
             "level":1
         }
