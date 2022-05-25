@@ -223,12 +223,6 @@
             "level":1
         },
         {
-            "title":"音乐解析",
-            "url":"http://music.zhuolin.wang/",
-            "category":"Chagnyong",
-            "level":1
-        },
-        {
             "title":"视频解析",
             "url":"http://tv.hzwdd.cn/",
             "category":"Chagnyong",
@@ -337,7 +331,7 @@
             "level":1
         },
         {
-            "title":"今日头条",
+            "title":"头条",
             "url":"https://momoyu.cc/",
             "category":"Work",
             "level":1
@@ -367,12 +361,6 @@
             "level":1
         },
         {
-            "title":"bootstrap",
-            "url":"https://v3.bootcss.com/components/",
-            "category":"Work",
-            "level":1
-        },
-        {
             "title":"腾讯文档",
             "url":"https://docs.qq.com",
             "category":"Work",
@@ -385,7 +373,7 @@
             "level":1
         },
         {
-            "title":"autoIT",
+            "title":"AutoIt",
             "url":"https://www.autoitx.com/Doc/",
             "category":"Work",
             "level":1
