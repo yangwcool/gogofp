@@ -187,12 +187,6 @@
             "level":1
         },
         {
-            "title":"北科ftp",
-            "url":"ftp://ftp.ustb.edu.cn/",
-            "category":"Chagnyong",
-            "level":1
-        },
-        {
             "title":"果壳剥壳",
             "url":"https://www.ghpym.com/",
             "category":"Chagnyong",
@@ -223,14 +217,8 @@
             "level":1
         },
         {
-            "title":"视频解析",
-            "url":"http://tv.hzwdd.cn/",
-            "category":"Chagnyong",
-            "level":1
-        },
-        {
             "title":"环评爱好者",
-            "url":"https://www.ghpym.com/",
+            "url":"http://www.eiafans.com/forum.php",
             "category":"Chagnyong",
             "level":1
         },
@@ -241,8 +229,14 @@
             "level":1
         },
         {
-            "title":"环评网",
+            "title":"中国环评",
             "url":"http://www.china-eia.com/",
+            "category":"Chagnyong",
+            "level":1
+        },
+        {
+            "title":"环评信用",
+            "url":"http://114.251.10.92:8080/XYPT/",
             "category":"Chagnyong",
             "level":1
         },
@@ -277,12 +271,6 @@
             "level":1
         },
         {
-            "title":"天地图",
-            "url":"http://map.tianditu.gov.cn/",
-            "category":"Chagnyong",
-            "level":1
-        },
-        {
             "title":"空间数据云",
             "url":"http://www.gscloud.cn/",
             "category":"Chagnyong",
@@ -303,12 +291,6 @@
         {
             "title":"Gitee",
             "url":"https://gitee.com",
-            "category":"Chagnyong",
-            "level":1
-        },
-        {
-            "title":"环评信用平台",
-            "url":"http://114.251.10.92:8080/XYPT/",
             "category":"Chagnyong",
             "level":1
         },
@@ -375,6 +357,30 @@
         {
             "title":"AutoIt",
             "url":"https://www.autoitx.com/Doc/",
+            "category":"Work",
+            "level":1
+        },
+        {
+            "title":"钛盘",
+            "url":"https://ttttt.link/",
+            "category":"Work",
+            "level":1
+        },
+        {
+            "title":"z-lib",
+            "url":"https://zh.z-lib.org/",
+            "category":"Work",
+            "level":1
+        },
+        {
+            "title":"环评543",
+            "url":"https://www.eia543.com/",
+            "category":"Work",
+            "level":1
+        },
+        {
+            "title":"环评技术平台",
+            "url":"http://cloud.lem.org.cn",
             "category":"Work",
             "level":1
         }
